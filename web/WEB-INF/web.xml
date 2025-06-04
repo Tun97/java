@@ -86,6 +86,14 @@
         <servlet-name>OrderDetailServlet</servlet-name>
         <servlet-class>control.admin.OrderDetailServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>DashboardServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StatisticsServlet</servlet-name>
+        <servlet-class>control.admin.StatisticsServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UserProductServlet</servlet-name>
         <url-pattern>/user/products</url-pattern>
@@ -166,6 +174,14 @@
     <servlet-mapping>
         <servlet-name>OrderDetailServlet</servlet-name>
         <url-pattern>/OrderDetailServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/DashboardServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StatisticsServlet</servlet-name>
+        <url-pattern>/StatisticsServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

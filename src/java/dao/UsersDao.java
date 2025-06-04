@@ -14,20 +14,20 @@ public class UsersDao {
         try {
             conn = new DBContext().getConnection();
         } catch (Exception e) {
-            System.err.println("❌ Lỗi kết nối cơ sở dữ liệu trong UsersDao:");
+            System.err.println("❌ Lỗi kết nối cơ sở dữ liệu:");
             e.printStackTrace();
         }
     }
 
     public void insert(Users user) {
-        String sql = "INSERT INTO Users (username, email, password, role, fullname) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Users (username, password, fullname, email, role) VALUES (?, ?, ?, ?, ?)";
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, user.getUsername());
-            ps.setString(2, user.getEmail());
-            ps.setString(3, user.getPassword());
-            ps.setString(4, user.getRole());
-            ps.setString(5, user.getFullname());
-            ps.executeUpdate();
+            ps.setString(2, user.getPassword());
+            ps.setString(3, user.getFullname());
+            ps.setString(4, user.getEmail());
+            ps.setString(5, user.getRole());
+
         } catch (SQLException e) {
             System.err.println("❌ Lỗi khi thêm người dùng:");
             e.printStackTrace();
@@ -35,13 +35,14 @@ public class UsersDao {
     }
 
     public boolean register(Users user) {
-        String sql = "INSERT INTO Users (username, email, password, role, fullname) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Users (username, password, fullname, email, role) VALUES (?, ?, ?, ?, ?)";
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, user.getUsername());
-            ps.setString(2, user.getEmail());
-            ps.setString(3, user.getPassword());
-            ps.setString(4, user.getRole());
-            ps.setString(5, user.getFullname());
+            ps.setString(2, user.getPassword());
+            ps.setString(3, user.getFullname());
+            ps.setString(4, user.getEmail());
+            ps.setString(5, user.getRole());
+
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {
             System.err.println("❌ Lỗi khi đăng ký người dùng:");
@@ -135,11 +136,11 @@ public class UsersDao {
     private Users extractUser(ResultSet rs) throws SQLException {
         int id = rs.getInt("id");
         String username = rs.getString("username");
-        String email = rs.getString("email");
         String password = rs.getString("password");
-        String role = rs.getString("role");
         String fullname = rs.getString("fullname");
+        String email = rs.getString("email");
+        String role = rs.getString("role");
 
-        return new Users(id, username, email, password, role, fullname);
+        return new Users(id, username, password, fullname, email, role);
     }
 }

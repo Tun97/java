@@ -9,28 +9,25 @@ public class Users {
     private String role;
 
     // Constructor đầy đủ (có id)
-    public Users(int id, String username, String email, String password, String role, String fullname) {
+    public Users(int id, String username, String password, String fullname, String email, String role) {
         this.id = id;
         this.username = username;
-        this.email = email;
         this.password = password;
-        this.role = role;
         this.fullname = fullname;
+        this.email = email;
+        this.role = role;
     }
 
-    // Constructor không có id (dùng cho đăng ký chẳng hạn)
-    public Users(String username, String email, String password, String role, String fullname) {
+    // Constructor không có id
+    public Users(String username, String password, String fullname, String email, String role) {
         this.username = username;
-        this.email = email;
         this.password = password;
-        this.role = role;
         this.fullname = fullname;
+        this.email = email;
+        this.role = role;
     }
 
-    // Constructor mặc định
-    public Users() {
-        // Không cần làm gì thêm
-    }
+    public Users() {}
 
     // Getters and Setters
 

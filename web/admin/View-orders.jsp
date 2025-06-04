@@ -11,6 +11,16 @@
         body {
             background-color: #f8fafc;
         }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .wrapper > main {
+            flex: 1;
+        }
+
         .container {
             margin-top: 40px;
             background-color: #fff;
@@ -43,9 +53,8 @@
 
 <div class="container">
     <h2>Danh sách Đơn hàng</h2>
-
-    <!-- BỘ LỌC TRẠNG THÁI -->
-    <form method="get" action="View-orders.jsp" class="mb-4 d-flex justify-content-end align-items-center filter-form">
+    <form method="get" action="OrdersManagerServlet" class="mb-4 d-flex justify-content-end align-items-center filter-form">
+    <input type="hidden" name="action" value="List" />
         <label for="status" class="me-2 fw-bold">Lọc theo trạng thái:</label>
         <select name="status" id="status" class="form-select me-2">
             <option value="">-- Tất cả --</option>

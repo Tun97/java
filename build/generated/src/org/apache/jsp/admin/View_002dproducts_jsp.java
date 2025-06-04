@@ -57,12 +57,12 @@ public final class View_002dproducts_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("    <meta charset=\"UTF-8\">\n");
       out.write("    <title>Quản lý sản phẩm</title>\n");
       out.write("    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n");
+      out.write("    <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap\" rel=\"stylesheet\">\n");
       out.write("    <style>\n");
       out.write("        body {\n");
       out.write("            background-color: #f9fafb;\n");
-      out.write("            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n");
+      out.write("            font-family: 'Inter', sans-serif;\n");
       out.write("        }\n");
-      out.write("\n");
       out.write("        .container {\n");
       out.write("            background-color: #fff;\n");
       out.write("            padding: 30px;\n");
@@ -163,7 +163,7 @@ public final class View_002dproducts_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                    ");
  if (item.getImage() != null && !item.getImage().isEmpty()) { 
       out.write("\n");
-      out.write("                        <img src=\"images/");
+      out.write("                        <img src=\"");
       out.print( item.getImage() );
       out.write("\" alt=\"Ảnh\" width=\"80\" height=\"80\">\n");
       out.write("                    ");

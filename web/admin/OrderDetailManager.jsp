@@ -71,7 +71,7 @@
 
             <div class="d-flex justify-content-between">
                 <button type="submit" class="btn btn-success w-45">Lưu</button>
-                <a href="<%=request.getContextPath()%>/admin/OrderDetailManagerServlet?action=List&orderId=<%=detail.getOrderId()%>" class="btn btn-outline-secondary w-45">Quay lại danh sách</a>
+                <a href="<%=request.getContextPath()%>/control.admin/OrderDetailManagerServlet?action=List&orderId=<%=detail.getOrderId()%>" class="btn btn-outline-secondary w-45">Quay lại danh sách</a>
             </div>
         </form>
     </div>

@@ -38,7 +38,6 @@
     </div>
 </div>
 
-<!-- Hiển thị thông báo lỗi nếu có -->
 <%
     String error = (String) request.getAttribute("error");
     if (error != null) {

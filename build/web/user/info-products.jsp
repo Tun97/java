@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <div class="wrapper">
 
 <%@ include file="header.jsp" %>
 
@@ -97,6 +98,6 @@
 </div>
 
 <%@ include file="footer.jsp" %>
-
+</div>
 </body>
 </html>

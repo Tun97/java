@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Admin Dashboard</title>
+    <title>Trang Chủ Quản Lý Admin</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -111,12 +111,12 @@
         <a href="#" class="has-submenu" onclick="toggleSubmenu(event)">🛒 Quản lý sản phẩm</a>
         <div class="submenu" id="productSubmenu">
             <a href="View-products.jsp" target="mainFrame">Sản phẩm</a>
-            <a href="View-product-variants.jsp" target="mainFrame">Biến thể sản phẩm</a>
+            <a href="View-product-variants.jsp" target="mainFrame">Kho sản phẩm</a>
             <a href="View-categories.jsp" target="mainFrame">Danh Mục</a>
         </div>
 
-        <a href="View-orders.jsp" target="mainFrame">🧾 Quản lý hóa đơn</a>
-        <a href="Statistics.jsp" target="mainFrame">📊 Thống kê</a>
+        <a href="View-orders.jsp" target="mainFrame">🧾 Quản lý đơn hàng</a>
+        <a href="${pageContext.request.contextPath}/admin/StatisticsServlet" target="mainFrame">📊 Thống kê</a>
 
         <div class="logout">
             <a href="<%= request.getContextPath() %>/logout">🚪 Đăng xuất</a>
@@ -124,7 +124,7 @@
     </div>
 
     <div class="main-content">
-        <iframe name="mainFrame" src="Statistics.jsp"></iframe>
+<iframe name="mainFrame" src="${pageContext.request.contextPath}/admin/StatisticsServlet"></iframe>
     </div>
 
     <script>

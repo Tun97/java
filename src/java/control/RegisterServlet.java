@@ -33,17 +33,17 @@ public class RegisterServlet extends HttpServlet {
 
         if (dao.checkUserExists(username)) {
             request.setAttribute("error", "Tên đăng nhập đã tồn tại!");
-            request.getRequestDispatcher("Register.jsp").forward(request, response);
+            request.getRequestDispatcher("user/Register.jsp").forward(request, response);
         } else {
             // Tùy ý thêm mã hóa mật khẩu tại đây nếu muốn bảo mật hơn
             Users newUser = new Users(username, password, fullname, email, "user");
 
             boolean success = dao.register(newUser);
             if (success) {
-                response.sendRedirect(request.getContextPath() + "/user/Login.jsp");
+                response.sendRedirect(request.getContextPath() + "/user/Login.jsp?message=Đăng ký thành công! Vui lòng đăng nhập.");
             } else {
                 request.setAttribute("error", "Đăng ký thất bại. Vui lòng thử lại.");
-                request.getRequestDispatcher("Register.jsp").forward(request, response);
+                request.getRequestDispatcher("user/Register.jsp").forward(request, response);
             }
         }
     }

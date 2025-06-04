@@ -10,12 +10,12 @@
     <meta charset="UTF-8">
     <title>Quản lý sản phẩm</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #f9fafb;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
-
         .container {
             background-color: #fff;
             padding: 30px;
@@ -102,7 +102,7 @@
                 <td><%= String.format("%,.0f", item.getPrice()) %> VNĐ</td>
                 <td>
                     <% if (item.getImage() != null && !item.getImage().isEmpty()) { %>
-                        <img src="images/<%= item.getImage() %>" alt="Ảnh" width="80" height="80">
+                        <img src="<%= item.getImage() %>" alt="Ảnh" width="80" height="80">
                     <% } else { %>
                         <span class="no-img">Không có ảnh</span>
                     <% } %>

@@ -17,6 +17,16 @@
     background-color: #fff5f7; /* Nền hồng phấn nhạt */
     color: #4a4a4a; /* Màu chữ xám đậm nhẹ */
 }
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper > main {
+    flex: 1;
+}
+
 
 /* Slideshow Styling */
 #slideshow {
@@ -186,6 +196,7 @@
     </style>
 </head>
 <body>
+    <div class="wrapper">
     <%@ include file="header.jsp" %>
     <section id="slideshow">
         <img src="https://cocolux.com/storage/slider/larger/1748915345-Banner%20-%20700x400px(5).webp" class="active" alt="Ảnh 1">
@@ -266,6 +277,7 @@
     </script>
 
     <%@ include file="footer.jsp" %>
+    </div>
 </body>
 </html>
 ```

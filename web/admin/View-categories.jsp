@@ -96,7 +96,6 @@
     </style>
 </head>
 <body>
-    <!-- Hiển thị thông báo thành công -->
     <%
         String message = (String) request.getAttribute("message");
         if (message != null) {
@@ -120,8 +119,6 @@
     %>
 
     <h2>Danh sách Danh Mục</h2>
-    
-    <!-- Hiển thị số lượng -->
     <%
         Integer count = (Integer) request.getAttribute("count");
         if (count != null) {
@@ -131,8 +128,7 @@
     </div>
     <%
         }
-    %>
-    
+    %>  
     <div class="center">
         <a href="CategoriesManagerServlet?action=AddOrEdit" class="btn">+ Thêm Danh Mục mới</a>
     </div>

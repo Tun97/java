@@ -5,6 +5,7 @@ import entity.Orders;
 
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -82,7 +83,16 @@ public class OrdersManagerServlet extends HttpServlet {
 
                 case "List":
                 default:
-                    request.setAttribute("list", dao.getAllOrders());
+                    String filterStatus = request.getParameter("status");
+                    List<Orders> list;
+                    if (filterStatus != null && !filterStatus.trim().isEmpty()) {
+                        System.out.println("Lọc theo trạng thái: " + filterStatus);
+                        list = dao.getOrdersByStatus(filterStatus);
+                    } else {
+                        System.out.println("Không lọc, hiển thị tất cả");
+                        list = dao.getAllOrders();
+                    }
+                    request.setAttribute("list", list);
                     request.getRequestDispatcher("/admin/View-orders.jsp").forward(request, response);
                     break;
             }

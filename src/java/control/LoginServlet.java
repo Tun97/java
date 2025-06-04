@@ -15,7 +15,8 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // Chuyển hướng đến trang login
-        response.sendRedirect("Login.jsp");
+        request.getRequestDispatcher("/user/Login.jsp").forward(request, response);
+
     }
 
     @Override
@@ -32,7 +33,7 @@ public class LoginServlet extends HttpServlet {
 
         if (user == null) {
             request.setAttribute("error", "❌ Sai tên đăng nhập hoặc mật khẩu!");
-            request.getRequestDispatcher("Login.jsp").forward(request, response);
+            request.getRequestDispatcher("/user/Login.jsp").forward(request, response);
         } else {
             // Tạo session mới
             HttpSession session = request.getSession(true);
@@ -49,9 +50,9 @@ public class LoginServlet extends HttpServlet {
                     break;
                 default:
                     // Nếu có role lạ
-                    session.invalidate(); // Hủy session nếu không hợp lệ
+                    session.invalidate(); 
                     request.setAttribute("error", "Quyền truy cập không hợp lệ.");
-                    request.getRequestDispatcher("Login.jsp").forward(request, response);
+                    request.getRequestDispatcher("/user/Login.jsp").forward(request, response);
                     break;
             }
         }

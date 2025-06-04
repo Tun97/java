@@ -20,114 +20,115 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head>
-<head>
-    <meta charset="UTF-8">
-    <title>Giỏ hàng</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
     <style>
         body {
-    background: linear-gradient(to right, #fff0f5, #ffe6f0);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px; /* Tăng kích thước chữ cơ bản */
-}
+                background: linear-gradient(to right, #fff0f5, #ffe6f0);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 16px; /* Tăng kích thước chữ cơ bản */
+            }
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
 
-h2 {
-    text-align: center;
-    color: #c2185b;
-    margin: 40px 0;
-    font-size: 2.5em; /* Tăng kích thước tiêu đề */
-}
+            .wrapper > main {
+                flex: 1;
+            }
 
-.btn-primary {
-    background-color: #f48fb1;
-    border-color: #f48fb1;
-    color: white;
-    padding: 10px 20px; /* Tăng kích thước nút */
-    font-size: 1.1em;
-}
 
-.btn-primary:hover {
-    background-color: #ec407a;
-    border-color: #ec407a;
-}
+            h2 {
+                text-align: center;
+                color: #c2185b;
+                margin: 40px 0;
+                font-size: 2.5em; /* Tăng kích thước tiêu đề */
+            }
 
-.btn-success {
-    background-color: #f06292;
-    border-color: #f06292;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.1em;
-}
+            .btn-primary {
+                background-color: #f48fb1;
+                border-color: #f48fb1;
+                color: white;
+                padding: 10px 20px; /* Tăng kích thước nút */
+                font-size: 1.1em;
+            }
 
-.btn-success:hover {
-    background-color: #e91e63;
-    border-color: #e91e63;
-}
+            .btn-primary:hover {
+                background-color: #ec407a;
+                border-color: #ec407a;
+            }
 
-.btn-danger {
-    background-color: #ef5350;
-    border-color: #ef5350;
-    color: white;
-    padding: 8px 16px; /* Tăng kích thước nút xóa */
-    font-size: 1em;
-}
+            .btn-success {
+                background-color: #f06292;
+                border-color: #f06292;
+                color: white;
+                padding: 10px 20px;
+                font-size: 1.1em;
+            }
 
-.btn-danger:hover {
-    background-color: #e53935;
-    border-color: #e53935;
-}
+            .btn-success:hover {
+                background-color: #e91e63;
+                border-color: #e91e63;
+            }
 
-.table {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Tăng chiều rộng bảng */
-    margin: 0 auto; /* Căn giữa bảng */
-}
+            .btn-danger {
+                background-color: #ef5350;
+                border-color: #ef5350;
+                color: white;
+                padding: 8px 16px; /* Tăng kích thước nút xóa */
+                font-size: 1em;
+            }
 
-th {
-    background-color: #f8bbd0;
-    color: #880e4f;
-    text-align: center;
-    padding: 15px; /* Tăng padding cho tiêu đề */
-    font-size: 1.2em; /* Tăng kích thước chữ tiêu đề */
-}
+            .btn-danger:hover {
+                background-color: #e53935;
+                border-color: #e53935;
+            }
 
-td {
-    text-align: center;
-    vertical-align: middle;
-    padding: 12px; /* Tăng padding cho ô */
-    font-size: 1.1em; /* Tăng kích thước chữ */
-}
+            .table {
+                background-color: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+                width: 90%; /* Tăng chiều rộng bảng */
+                margin: 0 auto; /* Căn giữa bảng */
+            }
 
-.container {
-    margin-top: 60px;
-    max-width: 1200px; /* Tăng chiều rộng container */
-}
+            th {
+                background-color: #f8bbd0;
+                color: #880e4f;
+                text-align: center;
+                padding: 15px; /* Tăng padding cho tiêu đề */
+                font-size: 1.2em; /* Tăng kích thước chữ tiêu đề */
+            }
 
-.mb-3 {
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: flex-start; /* Căn trái các nút */
-    gap: 15px; /* Khoảng cách giữa các nút */
-}
+            td {
+                text-align: center;
+                vertical-align: middle;
+                padding: 12px; /* Tăng padding cho ô */
+                font-size: 1.1em; /* Tăng kích thước chữ */
+            }
 
-strong {
-    color: #c2185b;
-    font-size: 1.2em; /* Tăng kích thước chữ tổng */
-}
+            .container {
+                margin-top: 60px;
+                max-width: 1200px; /* Tăng chiều rộng container */
+            }
+
+            .mb-3 {
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: flex-start; /* Căn trái các nút */
+                gap: 15px; /* Khoảng cách giữa các nút */
+            }
+
+            strong {
+                color: #c2185b;
+                font-size: 1.2em; /* Tăng kích thước chữ tổng */
+            }
     </style>
 </head>
 
 <body>
+<div class="wrapper">
 <%@ include file="header.jsp" %>
-
+<main>
 <div class="container">
     <h2>Giỏ hàng</h2>
     <div class="mb-3">
@@ -185,7 +186,8 @@ strong {
         </tbody>
     </table>
 </div>
-
+</main>
 <%@ include file="footer.jsp" %>
+</div>
 </body>
 </html>
