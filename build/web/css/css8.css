@@ -1,0 +1,81 @@
+.site-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px 15px 10px; /* Thu nhỏ padding */
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    /*position: fixed;  Giúp footer dính dưới */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Thu gọn column */
+    gap: 20px; /* Giảm khoảng cách giữa các cột */
+}
+
+.footer-column h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px; /* Giảm margin */
+    position: relative;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 30px;
+    height: 2px;
+    background-color: #007bff;
+}
+
+.footer-column p {
+    font-size: 0.85em;
+    opacity: 0.85;
+    margin: 5px 0; /* Giảm khoảng cách dòng */
+}
+
+.footer-column ul li {
+    margin: 6px 0; /* Giảm khoảng cách dòng */
+}
+
+.footer-column ul li a {
+    font-size: 0.85em;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 8px;
+    margin: 10px 0; /* Giảm margin */
+}
+
+.subscribe-form input {
+    padding: 8px;
+    font-size: 0.85em;
+}
+
+.subscribe-form button {
+    padding: 8px 16px;
+}
+
+.social-icons {
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    font-size: 0.75em;
+    opacity: 0.6;
+}

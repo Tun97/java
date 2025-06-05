@@ -1,0 +1,69 @@
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(to right, #ffe6f0, #ffccda);
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+        }
+
+        .card-header {
+            background-color: #ff99cc;
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .card-body {
+            background-color: #fff0f5;
+        }
+
+        .form-control {
+            border-radius: 10px;
+        }
+
+        .btn-success {
+            background-color: #ff66a3;
+            border-color: #ff66a3;
+            border-radius: 10px;
+        }
+
+        .btn-success:hover {
+            background-color: #ff3385;
+            border-color: #ff3385;
+        }
+
+        .card-footer {
+            background-color: #ffe6f0;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        a {
+            color: #ff3399;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .alert-danger {
+            border-radius: 10px;
+        }

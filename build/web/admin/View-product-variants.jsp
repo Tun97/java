@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Danh sách Biến thể sản phẩm</title>
+    <title>Danh sách kho sản phẩm</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -66,7 +66,7 @@
 <body>
 
 <div class="container">
-    <h2>Danh sách Biến thể sản phẩm</h2>
+    <h2>Danh sách kho sản phẩm</h2>
 
     <div class="mb-3 text-end">
         <a href="ProductVariantsManagerServlet?action=AddOrEdit" class="btn btn-success">+ Thêm biến thể mới</a>

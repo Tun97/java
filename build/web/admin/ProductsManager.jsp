@@ -35,7 +35,7 @@
 
 <div class="container">
     <div class="form-container">
-        <h2>Quản lý sản phẩm</h2>
+        <h2>Quản lý mĩ phẩm</h2>
         <form action="<%=request.getContextPath()%>/admin/ProductsManager" method="post">
             <input type="hidden" name="action" value="<%= action %>">
 

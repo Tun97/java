@@ -1,0 +1,193 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff5f7; /* Nền hồng nhạt nhẹ nhàng */
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #fce4ec; /* Viền hồng phấn */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.navbar-brand img {
+    height: 60px;
+}
+
+.nav-link {
+    color: #4a4a4a !important; /* Màu xám đậm cho chữ */
+    font-weight: 500;
+    padding: 0.75rem 1.25rem; /* Tăng khoảng cách giữa các mục nav */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f48fb1 !important; /* Hồng nhẹ khi hover */
+}
+
+.dropdown-menu {
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    background-color: #fff5f7; /* Nền dropdown hồng nhạt */
+}
+
+.dropdown-item {
+    color: #4a4a4a;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #fce4ec; /* Nền hồng nhạt khi hover dropdown */
+    color: #d81b60; /* Màu hồng đậm hơn */
+}
+
+/* Căn chỉnh form tìm kiếm và các nút */
+.form-inline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Khoảng cách giữa các phần tử */
+    flex-wrap: nowrap; /* Không cho xuống dòng */
+    width: 100%; /* Đảm bảo rộng đủ chỗ */
+    max-width: 600px; /* Điều chỉnh phù hợp nếu cần */
+}
+
+.form-inline .form-control {
+    border-radius: 2rem;
+    border: 1px solid #f8bbd0; /* Viền hồng nhạt */
+    padding: 0.5rem 1rem;
+    background-color: #fff5f7; /* Nền input hồng nhạt */
+    transition: border-color 0.3s ease;
+    flex-grow: 1; /* Input tự rộng tối đa */
+    min-width: 0; /* Fix flexbox overflow */
+}
+
+.form-inline .form-control:focus {
+    border-color: #f48fb1; /* Viền hồng đậm hơn khi focus */
+    box-shadow: 0 0 0 0.2rem rgba(244, 143, 177, 0.25); /* Hiệu ứng shadow hồng nhạt */
+}
+
+/* Căn chỉnh các nút */
+.form-inline .btn,
+.btn-outline-primary,
+.btn-outline-danger,
+.btn-outline-secondary {
+    border-radius: 2rem;
+    padding: 0.5rem 1.25rem; /* Kích thước nút đồng đều */
+    font-size: 0.875rem; /* Kích thước chữ nhỏ hơn */
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Giữ nút không xuống dòng */
+}
+
+.btn-outline-primary {
+    border-color: #f48fb1; /* Viền hồng nhạt */
+    color: #f48fb1;
+}
+
+.btn-outline-primary:hover {
+    background-color: #f48fb1; /* Nền hồng nhạt */
+    color: #ffffff;
+    border-color: #f48fb1;
+}
+
+.btn-outline-danger {
+    border-radius: 2rem;
+    padding: 0.4rem 1rem; /* Giảm padding để gọn hơn */
+    font-size: 0.85rem;
+    border-color: #ef9a9a; /* Viền hồng đỏ nhạt */
+    color: #ef9a9a;
+    white-space: nowrap; /* Giữ nút không xuống dòng */
+    transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+    background-color: #ef9a9a; /* Nền hồng đỏ nhạt */
+    color: #ffffff;
+    border-color: #ef9a9a;
+}
+
+.btn-outline-success {
+    border-color: #f06292; /* Viền hồng đậm */
+    color: #f06292;
+}
+
+.btn-outline-success:hover {
+    background-color: #f06292; /* Nền hồng đậm */
+    color: #ffffff;
+    border-color: #f06292;
+}
+
+.btn-outline-secondary {
+    border-color: #fce4ec; /* Viền hồng phấn */
+    color: #f48fb1;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #fce4ec; /* Nền hồng phấn */
+    color: #d81b60; /* Màu chữ hồng đậm */
+}
+
+/* Căn chỉnh user-info */
+.user-info {
+    font-weight: 600;
+    color: #d81b60; /* Màu hồng đậm */
+    margin-right: 1rem;
+    white-space: normal; /* Cho phép xuống dòng */
+    overflow: visible;   /* Hiển thị hết nội dung */
+    text-overflow: clip; /* Không dấu ... */
+    display: inline-block;
+    vertical-align: middle;
+    max-width: none; /* Bỏ giới hạn chiều rộng */
+}
+
+/* Container cho user-info + nút logout (giỏ hàng) */
+.d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* Không xuống dòng */
+    gap: 0.5rem;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .form-inline {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        width: 100%;
+        max-width: none;
+    }
+
+    .form-inline .form-control,
+    .form-inline .btn,
+    .btn-outline-primary,
+    .btn-outline-danger,
+    .btn-outline-secondary {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .user-info {
+        max-width: 100%;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .d-flex.align-items-center {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: nowrap; /* không wrap */
+    }
+}

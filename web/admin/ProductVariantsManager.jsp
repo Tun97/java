@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Quản lý biến thể sản phẩm</title>
+    <title>Quản lý Kho Tồn Mỹ phẩm</title>
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -35,7 +35,7 @@
 
 <div class="container">
     <div class="form-container">
-        <h2>Quản lý biến thể sản phẩm</h2>
+        <h2>Quản lý Kho Tồn Mỹ phẩm</h2>
         <form action="<%=request.getContextPath()%>/admin/ProductVariantsManagerServlet" method="post">
             <input type="hidden" name="action" value="<%=action%>">
 

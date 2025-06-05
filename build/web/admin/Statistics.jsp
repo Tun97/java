@@ -67,6 +67,19 @@
             background-color: #f1f5f9;
             color: #1e293b;
         }
+
+        .chart-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
     </style>
 </head>
 <body>
@@ -88,7 +101,7 @@
         </div>
     </div>
 
-    <h2>🔥 Top sản phẩm bán chạy</h2>
+    <h2>🔥 Top mỹ phẩm bán chạy</h2>
     <table>
         <tr>
             <th>#</th>
@@ -110,63 +123,62 @@
             }
         %>
     </table>
-        <h2>📈 Biểu đồ sản phẩm bán chạy</h2>
-        <canvas id="topSellingChart" width="600" height="300"></canvas>
-<script>
-    const productLabels = [];
-    const productQuantities = [];
 
-    <% if (topProducts != null) {
-           for (Map<String, Object> p : topProducts) {
-    %>
-        productLabels.push("<%= p.get("name").toString().replace("\"", "\\\"") %>");
-        productQuantities.push(<%= p.get("total_sold") %>);
-    <%   }
-       }
-    %>
+    <h2 style="text-align: center;">📈 Biểu đồ Mỹ phẩm bán chạy</h2>
+    <div class="chart-container">
+        <canvas id="topSellingChart"></canvas>
+    </div>
 
-    const ctx = document.getElementById('topSellingChart').getContext('2d');
-    const topSellingChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: productLabels,
-            datasets: [{
-                label: 'Số lượng đã bán',
-                data: productQuantities,
-                backgroundColor: 'rgba(54, 162, 235, 0.5)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1,
-                borderRadius: 5
-            }]
-        },
-        options: {
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Top sản phẩm bán chạy',
-                    font: {
-                        size: 18
-                    }
-                }
+    <script>
+        const productLabels = [];
+        const productQuantities = [];
+
+        <% if (topProducts != null) {
+               for (Map<String, Object> p : topProducts) {
+        %>
+            productLabels.push("<%= p.get("name").toString().replace("\"", "\\\"") %>");
+            productQuantities.push(<%= p.get("total_sold") %>);
+        <%   }
+           }
+        %>
+
+        const ctx = document.getElementById('topSellingChart').getContext('2d');
+        const topSellingChart = new Chart(ctx, {
+            type: 'pie', // Chuyển sang biểu đồ tròn
+            data: {
+                labels: productLabels,
+                datasets: [{
+                    label: 'Số lượng đã bán',
+                    data: productQuantities,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 159, 64, 0.6)',
+                        'rgba(199, 199, 199, 0.6)'
+                    ],
+                    borderColor: '#fff',
+                    borderWidth: 1
+                }]
             },
-            scales: {
-                y: {
-                    beginAtZero: true,
+            options: {
+                plugins: {
                     title: {
                         display: true,
-                        text: 'Số lượng'
-                    }
-                },
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Sản phẩm'
+                        text: 'Tỉ lệ sản phẩm bán chạy',
+                        font: {
+                            size: 18
+                        }
+                    },
+                    legend: {
+                        position: 'right'
                     }
                 }
             }
-        }
-    });
-</script>
+        });
+    </script>
 
 </body>
 </html>

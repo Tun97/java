@@ -4,10 +4,28 @@
 <head>
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background: linear-gradient(to right, #ffe6f0, #ffccda);
+    <link rel="stylesheet" href="../css/css5.css">
+</head>
+<style>
+            html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(to right, #ffe6f0, #ffccda);
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
         }
 
         .card {
@@ -58,9 +76,11 @@
         .alert-danger {
             border-radius: 10px;
         }
-    </style>
-</head>
+</style>
 <body>
+<!-- Hiệu ứng nền hạt cát -->
+<div id="particles-js"></div>
+
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -96,5 +116,52 @@
         </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ff69b4"
+            },
+            "shape": {
+                "type": "circle"
+            },
+            "opacity": {
+                "value": 0.5
+            },
+            "size": {
+                "value": 4
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffb6c1",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 2
+            }
+        },
+        "interactivity": {
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                }
+            }
+        },
+        "retina_detect": true
+    });
+</script>
 </body>
 </html>

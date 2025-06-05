@@ -11,62 +11,7 @@
     <title>Quản lý sản phẩm</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f9fafb;
-            font-family: 'Inter', sans-serif;
-        }
-        .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            margin-top: 40px;
-        }
-
-        h2 {
-            color: #1f2937;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .btn-success {
-            background-color: #22c55e;
-            border: none;
-        }
-
-        .btn-success:hover {
-            background-color: #16a34a;
-        }
-
-        .btn-primary {
-            background-color: #3b82f6;
-            border: none;
-        }
-
-        .btn-primary:hover {
-            background-color: #2563eb;
-        }
-
-        .btn-danger {
-            background-color: #ef4444;
-            border: none;
-        }
-
-        .btn-danger:hover {
-            background-color: #dc2626;
-        }
-
-        table img {
-            border-radius: 6px;
-            object-fit: cover;
-        }
-
-        .no-img {
-            color: #9ca3af;
-            font-style: italic;
-        }
-    </style>
+     <link rel="stylesheet" href="../css/css3.css">
 </head>
 <body>
 <div class="container">

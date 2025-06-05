@@ -1,0 +1,90 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff0f5; /* Hồng nhạt */
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f9c5d1; /* Tone hồng nhạt */
+            padding: 15px 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ec4899; /* Màu hồng nhạt */
+            text-align: center;
+            margin: 10px auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #6b021a;
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #fcddec;
+            color: #b91c1c;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 5px;
+            z-index: 10;
+        }
+
+        .submenu a {
+            display: block;
+            padding: 5px 10px;
+            color: #6b021a;
+        }
+
+        .has-submenu:hover .submenu {
+            display: block;
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100vh - 70px); /* Trừ navbar */
+            border: none;
+        }
+
+        .logout {
+            margin-left: 30px;
+        }
+
+        .logout a {
+            color: #dc2626;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .logout a:hover {
+            color: #b91c1c;
+        }
